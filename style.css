@@ -1,0 +1,22 @@
+body {
+    background-color: #f1f5f9;
+    color: #0ca678;
+    text-align: center;
+}
+.btn-primary {
+    background-color: #0ca678;
+    border-color: transparent;
+}
+.btn-primary:hover {
+    background-color: rgba(12, 166, 120, 0.8);
+    border-color: transparent;
+}
+.btn-outline-light {
+    background-color: #0ca678;
+    border-color: transparent;
+    color: #f1f5f9;
+}
+.btn-outline-light:hover {
+    background-color: rgba(12, 166, 120, 0.8);
+    color: #f1f5f9;
+}
