@@ -1,33 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIFTCAD</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIFTCAD</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" type="image/png" href="./favicon.png"/> 
 </head>
-<body>
-    <nav class="navbar navbar-dark  p-3" style="background-color: #0ca678;">
-        <div class="container">
-            <a class="navbar-brand" href="#">SIFTCAD</a>
-            <ul class="nav">
-                <li class="nav-item"><a class="nav-link text-light" href="#">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="#">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="#">Contato</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="#">A.I Toolchain</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="#">Blog</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container mt-5">
-        <h1 class="fw-bold">Develop beautiful web apps with Tabler</h1>
-        <p class="lead">Tabler is a free and open-source web application UI kit based on Bootstrap 5, with hundreds of responsive components and multiple layouts.</p>
-        <div class="d-flex justify-content-center gap-3">
-            <a href="#" class="btn btn-primary btn-lg">Download template</a>
-            <a href="#" class="btn btn-outline-light btn-lg">Preview template</a>
-        </div>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+    <button id="theme-toggle" title="Alternar tema">🌙</button>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0ca678;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">SIFTCAD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="./toolchain.html">A.I Toolchain</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
     </div>
-<script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.1.1/dist/js/tabler.min.js"></script>
+  </nav>
+
+  <!-- Início -->
+  <section id="inicio" class="fullscreen-section text-center bg-light">
+    <div class="container">
+      <h1 class="fw-bold display-4">SIFTCAD</h1>
+      <p class="lead">Excelência em Consultoria para Transformação e Inovação</p>
+      <a href="#" class="btn btn-primary btn-lg">Download template</a>
+      <a href="#" class="btn btn-outline-success btn-lg">Preview template</a>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="fullscreen-section bg-white">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Sobre Nós</h2>
+      <p>A SIFTCAD é uma empresa de consultoria comprometida em oferecer soluções estratégicas e inovadoras para impulsionar o sucesso de seus clientes. Nossa equipe é formada por especialistas em processos, tecnologia e transformação digital.</p>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="fullscreen-section bg-light">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Serviços</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Consultoria Estratégica</h5>
+              <p class="card-text">Diagnóstico e planejamento para crescimento sustentável e competitivo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Transformação Digital</h5>
+              <p class="card-text">Modernização de processos com uso de tecnologias emergentes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Inteligência Artificial</h5>
+              <p class="card-text">Soluções baseadas em dados para automatizar e prever com eficiência.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="fullscreen-section bg-white">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Fale Conosco</h2>
+      <form id="form-contato" action="https://formspree.io/f/mqapywqo" method="POST">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="nome" name="nome" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="mensagem" class="form-label">Mensagem</label>
+          <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+      </form>
+
+      <!-- Mensagem de sucesso -->
+      <div id="mensagem-sucesso" class="alert alert-success mt-4 d-none" role="alert">
+        Obrigado! Sua mensagem foi enviada com sucesso. Em breve entraremos em contato.
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-white py-4" style="background-color: #0ca678;">
+    © 2025 SIFTCAD. Todos os direitos reservados.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>

@@ -1,0 +1,24 @@
+body {
+    background-color: #ffffff;
+    color: #0ca678;
+    text-align: center;
+  }
+  .demo-section {
+    padding: 50px 0;
+  }
+  .demo-box {
+    background-color: #0ca678;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .demo-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }

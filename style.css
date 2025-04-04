@@ -3,20 +3,52 @@ body {
     color: #0ca678;
     text-align: center;
 }
+
 .btn-primary {
     background-color: #0ca678;
     border-color: transparent;
 }
+
 .btn-primary:hover {
     background-color: rgba(12, 166, 120, 0.8);
     border-color: transparent;
 }
-.btn-outline-light {
+
+.btn-outline-success {
     background-color: #0ca678;
     border-color: transparent;
     color: #f1f5f9;
 }
-.btn-outline-light:hover {
+
+.btn-outline-success:hover {
     background-color: rgba(12, 166, 120, 0.8);
     color: #f1f5f9;
 }
+
+div.container2 {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 300px 300px;
+    background: -webkit-linear-gradient(top, #f1f5f9 20%, #caced3 100%);
+    gap: 10px;
+    background-color: #0ca678;
+    padding: 10px;
+}
+
+div.tool {
+    background-color: #0ca678;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    text-align: center;
+    align-content: center;
+}
+
+.fullscreen-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centraliza verticalmente */
+    padding: 4rem 1rem; /* espaçamento interno opcional */
+  }
