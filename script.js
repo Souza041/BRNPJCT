@@ -1,31 +1,21 @@
-const form = document.getElementById("form-contato");
-    const mensagemSucesso = document.getElementById("mensagem-sucesso");
+const toggleButton = document.getElementById('themeToggle');
+const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+const savedTheme = localStorage.getItem('theme');
 
-    form.addEventListener("submit", async function (e) {
-      e.preventDefault();
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    document.body.classList.add('dark-mode');
+    toggleButton.innerText = '☀️';
+  } else {
+    document.body.classList.remove('dark-mode');
+    toggleButton.innerText = '🌙';
+  }
+}
 
-      const formData = new FormData(form);
+applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
 
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-
-        if (response.ok) {
-          form.reset();
-          mensagemSucesso.classList.remove("d-none");
-          setTimeout(() => {
-            mensagemSucesso.classList.add("d-none");
-          }, 6000);
-        } else {
-          alert("Erro ao enviar. Tente novamente.");
-        }
-      } catch (error) {
-        alert("Erro de conexão. Verifique sua internet.");
-      }
-    });
-
+toggleButton.addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark-mode');
+  toggleButton.innerText = isDark ? '☀️' : '🌙';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
